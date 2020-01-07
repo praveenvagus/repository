@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="104927" started-at="2019-10-18T15:26:46 IST" finished-at="2019-10-18T15:28:30 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="104927" started-at="2019-10-18T15:26:46 IST" finished-at="2019-10-18T15:28:30 IST">
+      <class name="testcases_Amil.AMF000TC_ShipperCRMConcept_3">
+        <test-method status="PASS" signature="Initializing_BrowserAmilFreight()[pri:0, instance:testcases_Amil.AMF000TC_ShipperCRMConcept_3@1176dcec]" name="Initializing_BrowserAmilFreight" is-config="true" duration-ms="25197" started-at="2019-10-18T15:26:46 IST" finished-at="2019-10-18T15:27:11 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initializing_BrowserAmilFreight -->
+        <test-method status="PASS" signature="LoggedIn_AmilFreight()[pri:1, instance:testcases_Amil.AMF000TC_ShipperCRMConcept_3@1176dcec]" name="LoggedIn_AmilFreight" duration-ms="8293" started-at="2019-10-18T15:27:11 IST" finished-at="2019-10-18T15:27:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoggedIn_AmilFreight -->
+        <test-method status="PASS" signature="ShipperCRM_AmilFreight()[pri:2, instance:testcases_Amil.AMF000TC_ShipperCRMConcept_3@1176dcec]" name="ShipperCRM_AmilFreight" duration-ms="71403" started-at="2019-10-18T15:27:19 IST" finished-at="2019-10-18T15:28:30 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ShipperCRM_AmilFreight -->
+      </class> <!-- testcases_Amil.AMF000TC_ShipperCRMConcept_3 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
