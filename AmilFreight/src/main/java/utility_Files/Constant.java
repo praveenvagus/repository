@@ -2,17 +2,21 @@ package utility_Files;
 
 public class Constant {
 	
-		public static final String URLD="http://stage.amilfreight.com/";
+		public static final String URLD="http://test.amilfreight.com/";
 		public static final String ChromeDriver="webdriver.chrome.driver";
 		public static final String ChromeDriver_Path=(System.getProperty("user.dir") +"/drivers/chromedriver.exe");
-		public static final String Amil_UserName="admin@ebintl.com";
-		public static final String Amil_Password="Admin@123";
+		public static final String UserName="admin1@ebintl.com";
+		public static final String Password="Admin@123";
 		public static final String lo4j="log4j.xml";
 		public static final String Path_TestData = (System.getProperty("user.dir") +"/src/test/resources/");
 		public static final String File_TestData = "TestData.xlsx";
 		public static final String Path_ScreenShot = (System.getProperty("user.dir") +"/Screenshots/");
 		//(System.getProperty("user.dir") +"/drivers/chromedriver.exe")
 		
+		//Login Credentials for User
+		public static final int UserLogin_Testcase =0;
+		public static final int UserLogin_Username=1;
+		public static final int UserLogin_Password=2;		
 		
 		//Test Data SelectMail
 		public static final int PostLoadShip_Testcase =0;
@@ -34,6 +38,18 @@ public class Constant {
 		public static final int Notes_ShipMentID=4;
 		public static final int Notes_Shipment_GUID=5;
 		public static final int Notes_LoadResult =6;
+		
+		//Test Data Task Management
+		public static final int TaskMgnt_TestCaseName =0;
+		public static final int TaskMgnt_TaskType =1;
+		public static final int TaskMgnt_Subject =2;
+		public static final int TaskMgnt_Priority =3;
+		public static final int TaskMgnt_Shipper=4;
+		public static final int TaskMgnt_StartDate=5;
+		public static final int TaskMgnt_EndDate=6;
+		public static final int TaskMgnt_AssignTo=7;
+		public static final int TaskMgnt_Descrip=8;
+		public static final int TaskMgnt_Result=9;
 		
 		//Test Data SelectMail
 		public static final int AllMail_TestCaseName =0;

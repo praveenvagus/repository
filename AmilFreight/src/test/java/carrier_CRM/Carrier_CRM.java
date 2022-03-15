@@ -25,6 +25,7 @@ public Carrier_CRM(WebDriver driver) {
 		
 }
 	
+@SuppressWarnings("unused")
 @Test
 public static void CarrierCRM_Verification(String sTestCaseName) throws Exception {	
 	
@@ -190,11 +191,11 @@ public static void CarrierCRM_Verification(String sTestCaseName) throws Exceptio
 				String carrier_CRM_Dashboard = driver.getWindowHandle();
 				
 				//filter the carrier who was added using the dot number
-				WebElement dot_Find = driver.findElement(By.xpath("//*[@id='tblDiv']/thead/tr/th[4]/div/a/i"));
-				js.executeScript("arguments[0].scrollIntoView()", dot_Find);
+				//WebElement dot_Find = driver.findElement(By.xpath("//*[@id='tblDiv']/thead/tr/th[4]/div/a/i"));
+				//js.executeScript("arguments[0].scrollIntoView()", dot_Find);
 				System.out.println("R3");
 				//click on the filter
-				driver.findElement(By.xpath("//*[@id='tblDiv']/thead/tr/th[4]/div/a/i")).click();
+				driver.findElement(By.xpath("//*[@id='divDot']//parent::div/a/i[@class='filter-i icon-filter4']")).click();
 				Thread.sleep(2000);
 				System.out.println("R1");
 				//send the filter criteria
@@ -480,33 +481,33 @@ public static void CarrierCRM_Verification(String sTestCaseName) throws Exceptio
 				}
 				
 				
-				/**********************************Preferred Lane Check*****************************************/
-				//if (a.replace(" ", "").equalsIgnoreCase(b.replace(" ", "")))
-				//c.replaceAll("[^a-zA-Z0-9]", "")
-				for(int n=1; n<=origin_Lane.size(); n++)
-				{
-					
-				String origin_Displayed = driver.findElement(By.xpath("//*[@id='preferedlanelist']/div[1]/table/tbody/tr["+n+"]/td[1]")).getText();
-				String get_Origin_Lane = origin_Displayed.replaceAll("[^a-zA-Z0-9]", "");
-				Assert.assertTrue(origin_Lane.get(n-1).replaceAll("[^a-zA-Z0-9]", "").equalsIgnoreCase(get_Origin_Lane), "Origin lane failed"+n);
-				for(int o=1; o<origin_Lane.size(); o++)
-				{
-				String destination_Displayed = driver.findElement(By.xpath("//*[@id='preferedlanelist']/div[1]/table/tbody/tr["+n+"]/td["+(o+1)+"]")).getText();
-				String get_Destination_Lane = destination_Displayed.replaceAll("[^a-zA-Z0-9]", "");
-				Assert.assertTrue(destination_Lane.get(n-1).replaceAll("[^a-zA-Z0-9]", "").equalsIgnoreCase(get_Destination_Lane), "destination lane failed"+n);
-				}	
-
-				}
+			
+/**********************************Preferred Lane Check*****************************************/
+ 
+//if (a.replace(" ", "").equalsIgnoreCase(b.replace(" ", "")))
+//c.replaceAll("[^a-zA-Z0-9]", "")
+for(int n=1; n<=origin_Lane.size(); n++)
+{
+String origin_Displayed = driver.findElement(By.xpath("//*[@id='preferedlanelist']/div[1]/table/tbody/tr["+n+"]/td[1]")).getText();
+String get_Origin_Lane = origin_Displayed.replaceAll("[^a-zA-Z0-9]", "");
+System.out.println(origin_Displayed+"5444545"+get_Origin_Lane);
+Assert.assertTrue(origin_Lane.get(n-1).replaceAll("[^a-zA-Z0-9]", "").equalsIgnoreCase(get_Origin_Lane), "Origin lane failed"+n);
+for(int o=1; o<origin_Lane.size(); o++)
+{
+String destination_Displayed = driver.findElement(By.xpath("//*[@id='preferedlanelist']/div[1]/table/tbody/tr["+n+"]/td["+(o+1)+"]")).getText();
+String get_Destination_Lane = destination_Displayed.replaceAll("[^a-zA-Z0-9]", "");
+Assert.assertTrue(destination_Lane.get(n-1).replaceAll("[^a-zA-Z0-9]", "").equalsIgnoreCase(get_Destination_Lane), "destination lane failed"+n);
+}	
+}
 				
-				/*********************************Preferred State check******************************************/
-				
-				
+/*********************************Preferred State check******************************************/
+/*			
 for(int p=1; p<=origin_State.size(); p++)
 {
-//System.out.println(origin_State.size());	
+System.out.println(origin_State.size());	
 String[] origin_State_Displayed = driver.findElement(By.xpath("//*[@id='preferredstatediv']/div[1]/table/tbody/tr["+p+"]/td[1]")).getText().split("\\(");
 String get_Origin_State = origin_State_Displayed[0];
-//System.out.println(origin_State.get(p-1)+"     "+origin_State_Displayed[0]);
+System.out.println(origin_State.get(p-1)+"     "+origin_State_Displayed[0]);
 Assert.assertTrue(origin_State.get(p-1).equalsIgnoreCase(get_Origin_State), "Origin state failed"+p);	
 for(int q=1; q<origin_Lane.size(); q++)
 	{
@@ -515,33 +516,31 @@ String get_Destination_State = destination_State_Displayed[0];
 Assert.assertTrue(destination_State.get(p-1).equalsIgnoreCase(get_Destination_State), "destination state failed"+p);
 	}	
 }
+*/				
 				
+/************************************Zones and States*************************************/
+//get the states from the 
 				
-				/************************************Zones and States*************************************/
+for(int r=1; r<=states_In_Zone.size(); r++)
+{
+String zone_State_Displayed = driver.findElement(By.xpath("//*[@id='collapsible-control-right-group8']/div/div/div[1]/div[1]/ul/li/ul/li["+r+"]")).getText();
+Assert.assertTrue(states_In_Zone.get(r-1).equals(zone_State_Displayed), "zones state issue"+r);
+}
+
+/*******************************Trailer Info*********************************************/
 				
-				//get the states from the 
+//go to the trailer section by scrolling
+WebElement trailer_finder = driver.findElement(By.xpath("//*[@id='trailerinfodiv']/div[1]/h6/a"));
+js.executeScript("arguments[0].scrollIntoView()", trailer_finder);
+Thread.sleep(1000);
 				
-				for(int r=1; r<=states_In_Zone.size(); r++)
-				{
-				String zone_State_Displayed = driver.findElement(By.xpath("//*[@id='collapsible-control-right-group8']/div/div/div[1]/div[1]/ul/li/ul/li["+r+"]")).getText();
-				Assert.assertTrue(states_In_Zone.get(r-1).equals(zone_State_Displayed), "zones state issue"+r);
-				}
-			
+//tractor count check
+String tractor_Count_Displayed = driver.findElement(By.xpath("//*[@id='collapsible-control-right-group9']/div/div[1]/div[1]/div[1]/span")).getText();
+Assert.assertTrue(tractor_Count.equals(tractor_Count_Displayed), "Tractor count issue");
 				
-				/*******************************Trailer Info*********************************************/
-				
-				//go to the trailer section by scrolling
-				WebElement trailer_finder = driver.findElement(By.xpath("//*[@id='trailerinfodiv']/div[1]/h6/a"));
-				js.executeScript("arguments[0].scrollIntoView()", trailer_finder);
-				Thread.sleep(1000);
-				
-				//tractor count check
-				String tractor_Count_Displayed = driver.findElement(By.xpath("//*[@id='collapsible-control-right-group9']/div/div[1]/div[1]/div[1]/span")).getText();
-				Assert.assertTrue(tractor_Count.equals(tractor_Count_Displayed), "Tractor count issue");
-				
-				//driver count check
-				String driver_Count_Displayed = driver.findElement(By.xpath("//*[@id='collapsible-control-right-group9']/div/div[1]/div[1]/div[2]/span")).getText();
-				Assert.assertTrue(driver_Count.equals(driver_Count_Displayed), "Driver count issue");
+//driver count check
+String driver_Count_Displayed = driver.findElement(By.xpath("//*[@id='collapsible-control-right-group9']/div/div[1]/div[1]/div[2]/span")).getText();
+Assert.assertTrue(driver_Count.equals(driver_Count_Displayed), "Driver count issue");
 				
 				//get the trailer and compare
 				//"//*[@id='collapsible-control-right-group9']/div/div[1]/div[1]/div[3]/div[1]/div/ul/li[1]/span[1]"

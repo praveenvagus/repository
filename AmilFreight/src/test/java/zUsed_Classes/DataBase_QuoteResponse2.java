@@ -4,22 +4,9 @@ import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Vector;
-
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.text.TabableView;
 
 import org.testng.annotations.Test;
-
-import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
 public class DataBase_QuoteResponse2 {
 	

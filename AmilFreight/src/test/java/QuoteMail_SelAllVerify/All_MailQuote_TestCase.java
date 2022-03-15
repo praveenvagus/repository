@@ -5,14 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import common_Operations.AmilFreight_Loggedout;
 import common_Operations.AmilFreight_Login;
 import utility_Files.BaseClass;
 import utility_Files.Log;
 import utility_Files.Utils;
-import zUsed_Classes.EDMS_WithMethod;
-
 
 public class All_MailQuote_TestCase
 {
@@ -37,7 +34,7 @@ public class All_MailQuote_TestCase
   @Test(priority = 1)
   public void LoggedIn_AmilFreight() throws Exception {
 
-	  AmilFreight_Login.Amil_UserLogin();
+	  AmilFreight_Login.Amil_UserLogin("Admin");
 	  Reporter.log("Login with Admin Username & password - Successful");
 	 }
   

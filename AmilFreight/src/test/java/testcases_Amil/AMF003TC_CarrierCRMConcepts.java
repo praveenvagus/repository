@@ -4,16 +4,9 @@ import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import carrier_CRM.Carrier_AMILvsCRM;
+
 import carrier_CRM.Carrier_CRM;
-import carrier_CRM.Carrier_SignUp;
-import common_Operations.AmilCarrier_SignUp;
 import common_Operations.AmilFreight_Login;
-import postLoad_Alerts.PostLoad_AddDropAlert;
-import postLoad_Alerts.PostLoad_AddPickUpAlert;
-import postLoad_Alerts.PostLoad_AddPicturesAlert;
-import postLoad_Alerts.PostLoad_AddReferenceAlert;
-import postLoad_Alerts.PostLoad_OverviewAlerts;
 import utility_Files.BaseClass;
 import utility_Files.Log;
 import utility_Files.Utils;
@@ -47,7 +40,7 @@ public void LoggedIn_AmilFreight() throws Exception
 @Test(priority=2)
 public void Carrier_SignUp2() throws Exception 
 {
-	AmilFreight_Login.Amil_UserLogin();
+	AmilFreight_Login.Amil_UserLogin("Admin");
 	  Carrier_CRM.CarrierCRM_Verification("CarrierSignUp"); 
 	  }
 

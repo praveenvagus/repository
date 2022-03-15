@@ -11,6 +11,7 @@ public class DataBase_QuoteResponse {
 	
 
 	int DBValue;
+	@SuppressWarnings("unused")
 	@Test
 	public void gettingvaluecategory() throws ClassNotFoundException, SQLException{
 				

@@ -35,7 +35,7 @@ public class AMF000TC_ShipperCRMConcept_3
 @Test(priority = 1)
 public void LoggedIn_AmilFreight() throws Exception {
 
-	AmilFreight_Login.Amil_UserLogin();
+	AmilFreight_Login.Amil_UserLogin("Admin");
 	Reporter.log("Login with Admin Username & password - Successful");	  	
 }
   

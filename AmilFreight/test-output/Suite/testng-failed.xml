@@ -3,14 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="zUsed_Classes.AMF002TC_Post2OpenLoad">
+      <class name="aaaa_Shipper.MenuNavigator_TestCase">
         <methods>
-          <include name="EmailReceipent_List"/>
-          <include name="MailQuote_AmountVerify"/>
           <include name="Initializing_BrowserAmilFreight"/>
-          <include name="PostLoad_toOpenStatus"/>
+          <include name="Navigation_AmilFreight"/>
         </methods>
-      </class> <!-- zUsed_Classes.AMF002TC_Post2OpenLoad -->
+      </class> <!-- aaaa_Shipper.MenuNavigator_TestCase -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

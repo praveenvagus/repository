@@ -23,7 +23,7 @@ public class Shipper_PostLoad extends BaseClass
 		}
 
 	@Test
-	public static void shipperPostLoad(String sTestCaseName) throws InterruptedException 
+	public static void shipperPostLoad(String sTestCaseName) throws Exception 
 	{
 		//-------------------------------------------------------Log Out Shipper Login----------------------------
 		Locators.Toggle_LogOut().click();

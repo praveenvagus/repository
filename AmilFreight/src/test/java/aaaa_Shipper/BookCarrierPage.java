@@ -13,6 +13,7 @@ public class BookCarrierPage extends BaseClass {
 	public BookCarrierPage(WebDriver driver) {
 		super(driver);
 	}
+	@SuppressWarnings("unused")
 	@Test
 	public static void Open2BookCarriers(String sTestCaseName) throws Exception
 	{

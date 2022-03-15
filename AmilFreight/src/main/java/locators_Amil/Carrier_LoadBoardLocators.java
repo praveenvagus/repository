@@ -13,7 +13,7 @@ public class Carrier_LoadBoardLocators extends BaseClass
 	}
 	private static WebElement element = null;
 
-	public static WebElement Search_ShipmentId()
+	public static WebElement Search_ShipmentId() throws Exception
 	{
 			try
         { 
@@ -26,7 +26,7 @@ public class Carrier_LoadBoardLocators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Click_Search()
+	public static WebElement Click_Search() throws Exception
 	{
 			try
         { 
@@ -39,7 +39,7 @@ public class Carrier_LoadBoardLocators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Click_Tab()
+	public static WebElement Click_Tab() throws Exception
 	{
 			try
         { 
@@ -52,7 +52,7 @@ public class Carrier_LoadBoardLocators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Click_EditShipment()
+	public static WebElement Click_EditShipment() throws Exception
 	{
 			try
         { 
@@ -65,7 +65,7 @@ public class Carrier_LoadBoardLocators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Special_Instruction()
+	public static WebElement Special_Instruction() throws Exception
 	{
 			try
         { 
@@ -78,7 +78,7 @@ public class Carrier_LoadBoardLocators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Hazardous()
+	public static WebElement Hazardous() throws Exception
 	{
 			try
         { 
@@ -91,7 +91,7 @@ public class Carrier_LoadBoardLocators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Submit_Shipment()
+	public static WebElement Submit_Shipment() throws Exception
 	{
 			try
         { 
@@ -104,7 +104,7 @@ public class Carrier_LoadBoardLocators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Confirm_Shipment()
+	public static WebElement Confirm_Shipment() throws Exception
 	{
 			try
         { 
@@ -117,7 +117,7 @@ public class Carrier_LoadBoardLocators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Toggle_LogOut()
+	public static WebElement Toggle_LogOut() throws Exception
 	{
         try
         { 
@@ -130,7 +130,7 @@ public class Carrier_LoadBoardLocators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement LogOut()
+	public static WebElement LogOut() throws Exception
 	{
         try
         { 
@@ -143,7 +143,7 @@ public class Carrier_LoadBoardLocators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Confirm_logout()
+	public static WebElement Confirm_logout() throws Exception
 	{
         try
         { 
@@ -156,7 +156,7 @@ public class Carrier_LoadBoardLocators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Login_user_Id()
+	public static WebElement Login_user_Id() throws Exception
 	{
         try
         { 
@@ -169,7 +169,7 @@ public class Carrier_LoadBoardLocators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Login_Password()
+	public static WebElement Login_Password() throws Exception
 	{
         try
         { 
@@ -182,7 +182,7 @@ public class Carrier_LoadBoardLocators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Login()
+	public static WebElement Login() throws Exception
 	{
         try
         { 
@@ -195,7 +195,7 @@ public class Carrier_LoadBoardLocators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement LoadShip_id()
+	public static WebElement LoadShip_id() throws Exception
 	{
         try
         { 
@@ -208,7 +208,7 @@ public class Carrier_LoadBoardLocators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Search()
+	public static WebElement Search() throws Exception
 	{
         try
         { 

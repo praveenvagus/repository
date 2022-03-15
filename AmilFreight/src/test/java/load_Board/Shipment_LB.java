@@ -26,6 +26,7 @@ public class Shipment_LB extends BaseClass {
 		super(driver);
 		}
 
+	@SuppressWarnings("unused")
 	@Test
 	public static void PostLoad_ShipmentGUID(String sTestCaseName) throws Exception
 	{
@@ -129,7 +130,6 @@ public class Shipment_LB extends BaseClass {
 		ShipDash_Post.Del_DelLocation().sendKeys(PLShip_Destination);				
 		Thread.sleep(3500);				
 		ShipDash_Post.Del_DelLocation().sendKeys(Keys.ARROW_DOWN);	
-		Thread.sleep(1000);
 		ShipDash_Post.Del_DelLocation().sendKeys(Keys.ENTER);		
 		Thread.sleep(300);	
 		
@@ -159,11 +159,14 @@ public class Shipment_LB extends BaseClass {
 		System.out.println("Kathirvel Rama4 Moorthy");
 		Thread.sleep(3500);
 				
-	/*	if(driver.findElement(By.xpath("//*[@id='adddetails']/div[4]/div[2]/button[3]")).isDisplayed()) {
+		if(driver.findElement(By.xpath("//*[@id='adddetails']/div[4]/div[2]/button[3]")).isDisplayed()) {
 			driver.findElement(By.xpath("//*[@id='adddetails']/div[4]/div[2]/button[3]")).click();
 		}
-		Thread.sleep(9500);*/
-		driver.close();
+		Thread.sleep(8500);
+		String notify = driver.findElement(By.cssSelector(".notifyjs-bootstrap-base.notifyjs-bootstrap-success>span")).getText();
+		System.out.println(notify);
+		
+		//driver.close();
 		Thread.sleep(2300);
   
 		Utils.Instance_NewWindow(driver);

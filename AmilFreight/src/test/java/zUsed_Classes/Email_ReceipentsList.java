@@ -23,6 +23,7 @@ public class Email_ReceipentsList extends BaseClass {
 		
 	}
 
+	@SuppressWarnings("unused")
 	@Test
 	public static void Verification(String sTestCaseName) throws Exception {
 		

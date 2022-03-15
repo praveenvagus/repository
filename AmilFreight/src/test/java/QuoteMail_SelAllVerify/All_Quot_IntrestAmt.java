@@ -22,6 +22,7 @@ public class All_Quot_IntrestAmt extends BaseClass {
 		super(driver);
 		}
 
+	@SuppressWarnings("unused")
 	@Test
 	public static void Verification(String sTestCaseName) throws Exception {
 		

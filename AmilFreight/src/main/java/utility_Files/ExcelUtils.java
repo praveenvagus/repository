@@ -86,8 +86,8 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 			public static int getRowContains(String sTestCaseName, int colNum) throws Exception{
         		int i;
         		try {
-        			System.out.println(sTestCaseName);
-        			System.out.println("getrowContains fun col no  " + colNum);
+        			//System.out.println(sTestCaseName);
+        			//System.out.println("getrowContains fun col no  " + colNum);
         			int rowCount = ExcelUtils.getRowUsed();
         			for ( i=1; i<=rowCount; i++){
         				if  (ExcelUtils.getCellData(i,colNum).equalsIgnoreCase(sTestCaseName)){
@@ -104,7 +104,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
         	public static int getRowUsed() throws Exception {
         		try{
         			int RowCount = ExcelWSheet.getLastRowNum();
-        			System.out.println("Total number of Row used return as < " + RowCount + " >.");	
+        			//System.out.println("Total number of Row used return as < " + RowCount + " >.");	
         			//Log.info("Total number of Row used return as < " + RowCount + " >.");		
         			return RowCount;
         		}catch (Exception e){

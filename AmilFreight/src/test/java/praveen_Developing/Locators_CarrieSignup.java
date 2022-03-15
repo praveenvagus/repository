@@ -1,10 +1,7 @@
 package praveen_Developing;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import utility_Files.BaseClass;
 
 public class Locators_CarrieSignup extends BaseClass_OpenBrowser {
 

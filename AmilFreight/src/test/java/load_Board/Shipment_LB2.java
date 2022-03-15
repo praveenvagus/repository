@@ -2,26 +2,16 @@ package load_Board;
 
 import static org.testng.Assert.assertTrue;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
-
-import locators_Amil.ShipDash_Post;
 import utility_Files.BaseClass;
 import utility_Files.Constant;
 import utility_Files.ExcelUtils;
 import utility_Files.Log;
-import utility_Files.Utils;
-import utility_Files.Utils2;
 
 public class Shipment_LB2 extends BaseClass {
 
@@ -29,14 +19,18 @@ public class Shipment_LB2 extends BaseClass {
 		super(driver);
 		}
 
+	@SuppressWarnings("unused")
 	@Test
 	public static void PostLoad_ShipmentGUID(String sTestCaseName) throws Exception
 	{
-		Thread.sleep(7500);
-	    driver.navigate().to("http://stage.amilfreight.com/shipment/dashboard");
-	    Thread.sleep(2500);
-	    driver.navigate().refresh();  Thread.sleep(5500);
-
+		
+		driver.findElement(By.xpath("//*[@id='main-nav']/div/div[2]/div[3]/div/ul/li[1]/a")).click();
+		Thread.sleep(3500);
+		driver.findElement(By.id("txtusername")).sendKeys("katrina");
+		driver.findElement(By.id("txtpassword")).sendKeys("Admin@123");
+		driver.findElement(By.id("btnSignIn")).click();	
+		Thread.sleep(3500);	
+		
 		DOMConfigurator.configure("log4j.xml");
 		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,"LoadBoard");
 		int rowused = ExcelUtils.getRowUsed();
@@ -54,41 +48,32 @@ public class Shipment_LB2 extends BaseClass {
 		String PLShip_DispExec = ExcelUtils.getCellData(iTestCaseRow, Constant.PLShip_DispExec);
 		String PLShip_Origin = ExcelUtils.getCellData(iTestCaseRow, Constant.PLShip_Origin);
 		String PLShip_Destination = ExcelUtils.getCellData(iTestCaseRow, Constant.PLShip_Destination);
-		String PLShip_ShipmentID = ExcelUtils.getCellData(iTestCaseRow, Constant.PLShip_Destination);
-		String PLShip_ShipmentGUID = ExcelUtils.getCellData(iTestCaseRow, Constant.PLShip_Destination);
+		String PLShip_ShipmentID = ExcelUtils.getCellData(iTestCaseRow, Constant.PLShip_ShipmentID);
+		String PLShip_ShipmentGUID = ExcelUtils.getCellData(iTestCaseRow, Constant.PLShip_ShipmentGUID);
 
-		
-		driver.get("http://stage.amilfreight.com/");
-		driver.manage().window().maximize();	
-		driver.findElement(By.xpath("//*[@id='main-nav']/div/div[2]/div[3]/div/ul/li[1]/a")).click();
-		Thread.sleep(5000);
-		driver.findElement(By.id("txtusername")).sendKeys("katrina");
-		driver.findElement(By.id("txtpassword")).sendKeys("Admin@123");
-		driver.findElement(By.id("btnSignIn")).click();	
-		Thread.sleep(10000);	
-		
-		String ShipmentId="AFS20010200003";
+	
 		driver.findElement(By.xpath("//*[@id='searchshipmentid']")).clear();
-		driver.findElement(By.xpath("//*[@id='searchshipmentid']")).sendKeys(ShipmentId);
+		driver.findElement(By.xpath("//*[@id='searchshipmentid']")).sendKeys(PLShip_ShipmentID);
 		driver.findElement(By.xpath("//*[@id='applyAdvSearch']")).click();
-		Thread.sleep(7000);
+		Thread.sleep(2500);
 		String ExactMatching_Category=driver.findElement(By.xpath("//*[@id='tabMatched']/a[2]/span/label")).getAttribute("innerText");
 		//System.out.println(ExactMatching_Category);
 		if(ExactMatching_Category.equalsIgnoreCase("Exact Matching"))
 		{
-			String ShipmentID_LB=driver.findElement(By.xpath("//*[@id='shipRpt ship']/div[1]/div[1]/span[1]")).getText();
-			//System.out.println(ShipmentID_LB);
-			assertTrue(ShipmentID_LB.equalsIgnoreCase(ShipmentId));		
+		String ShipmentID_LB=driver.findElement(By.xpath("//*[@id='shipRpt ship']/table/tbody/tr/td[1]/div/span[1]")).getText();	
+		//*[@id='shipRpt ship']/div[1]/div[1]/span[1] - Old
+		System.out.println(ShipmentID_LB);
+		assertTrue(ShipmentID_LB.equalsIgnoreCase(PLShip_ShipmentID));	
 		}
-			
+
 		driver.findElement(By.xpath("//*[@id='tabOther']/a[2]/span/label")).click();
-		//searchAction(ShipmentId);	
+		//searchAction(PLShip_ShipmentID);	
 		List<WebElement> we=	driver.findElements(By.xpath("//*[@id='shiplistpaging']/div[@ng-repeat='shipment in ShipmentDashboardCollection']"));
-		System.out.println(we.size());
+		//System.out.println(we.size());
 		String OtherLoad_Category=driver.findElement(By.xpath("//*[@id='tabOther']/a[2]/span/label")).getAttribute("innerText");
 		if(OtherLoad_Category.equalsIgnoreCase("Other Loads"))
 		{
-			assertTrue(we.size()==0);
+		assertTrue(we.size()==0);
 		}
 		}
 		

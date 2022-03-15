@@ -134,7 +134,7 @@ System.out.println("******************************************");
 
 driver.navigate().to("http://stage.amilfreight.com/");	
 
-AmilFreight_Login.Amil_UserLogin();
+AmilFreight_Login.Amil_UserLogin("Admin");
 
 driver.navigate().to("http://stage.amilfreight.com/crm/sales/carrier-opt-v2");
 
@@ -242,7 +242,7 @@ Thread.sleep(3000);
 
 				driver.navigate().to("http://stage.amilfreight.com/");	
 				
-				AmilFreight_Login.Amil_UserLogin();
+				AmilFreight_Login.Amil_UserLogin("Admin");
 				Thread.sleep(3000);
 				
 				driver.navigate().to("http://stage.amilfreight.com/crm/sales/carrier-opt-v2");
@@ -354,7 +354,7 @@ Thread.sleep(3000);
 	
 	driver.navigate().to("http://stage.amilfreight.com/");	
 	
-	AmilFreight_Login.Amil_UserLogin();
+	AmilFreight_Login.Amil_UserLogin("Admin");
 	
 	driver.navigate().to("http://stage.amilfreight.com/crm/sales/carrier-opt-v2");
 	

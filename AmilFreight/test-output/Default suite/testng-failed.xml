@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="aaui_Operations.MenuNavigator_TestCase">
+      <class name="task_Management.TaskMgmt_TestCase">
         <methods>
-          <include name="Navigation_AmilFreight"/>
           <include name="Initializing_BrowserAmilFreight"/>
+          <include name="LoggedIn_AmilFreight"/>
+          <include name="Task_management"/>
         </methods>
-      </class> <!-- aaui_Operations.MenuNavigator_TestCase -->
+      </class> <!-- task_Management.TaskMgmt_TestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

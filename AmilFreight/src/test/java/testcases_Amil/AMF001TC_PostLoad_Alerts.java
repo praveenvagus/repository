@@ -19,6 +19,7 @@ import utility_Files.Log;
 import utility_Files.Utils;
 
 
+@SuppressWarnings("deprecation")
 public class AMF001TC_PostLoad_Alerts
 {
 	public WebDriver driver;
@@ -47,7 +48,7 @@ public class AMF001TC_PostLoad_Alerts
   @Test(priority = 1)
   public void LoggedIn_AmilFreight() throws Exception {
 
-	  AmilFreight_Login.Amil_UserLogin();
+	  AmilFreight_Login.Amil_UserLogin("Admin");
 	  	
   }
   

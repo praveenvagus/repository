@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import common_Operations.AmilFreight_Loggedout;
-import common_Operations.AmilFreight_Login;
 import utility_Files.BaseClass;
 import utility_Files.Log;
 import utility_Files.Utils;

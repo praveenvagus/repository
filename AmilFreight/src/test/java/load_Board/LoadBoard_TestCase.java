@@ -4,9 +4,7 @@ import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import common_Operations.AmilFreight_Loggedout;
-import common_Operations.AmilFreight_Login;
 import utility_Files.BaseClass;
 import utility_Files.Log;
 import utility_Files.Utils;
@@ -34,20 +32,22 @@ public void Initializing_BrowserAmilFreight() throws Exception
 @Test(priority = 1)
 public void LoggedIn_AmilFreight() throws Exception 
 {
-//AmilFreight_Login.Amil_UserLogin();	
+	//AmilFreight_Login.Amil_UserLogin("Admin");
+	//AmilFreight_Loggedout.Loggedout();
 }
  
 @Test(priority = 2)
 public void Navigation_AmilFreight() throws Exception 
 {
 	//Shipment_LB.PostLoad_ShipmentGUID("LoadBoard");
-	//Shipment_LB2.PostLoad_ShipmentGUID("LoadBoard");
+	
 }
 
 @Test(priority = 3)
-public void LoggedOut_AmilFreight() throws Exception {
+public void LoadBoardAmilFreight() throws Exception {
 
-	//AmilFreight_Loggedout.Loggedout();
+	Shipment_LB2.PostLoad_ShipmentGUID("LoadBoard");
+	AmilFreight_Loggedout.Loggedout();
 		  	
 }
 }

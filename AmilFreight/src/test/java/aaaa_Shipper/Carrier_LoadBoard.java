@@ -15,7 +15,7 @@ public class Carrier_LoadBoard extends BaseClass
 		}
 
 	@Test
-	public static void Carrier_LoadBoard2()throws InterruptedException
+	public static void Carrier_LoadBoard2()throws Exception
 	{
 		String ShipmentId="AFS19112100001";
 		Carrier_LoadBoardLocators.Search_ShipmentId().sendKeys(ShipmentId);

@@ -33,7 +33,7 @@ public void Initializing_BrowserAmilFreight() throws Exception
 @Test(priority = 1)
 public void LoggedIn_AmilFreight() throws Exception {
 	
-	AmilFreight_Login.Amil_UserLogin();
+	AmilFreight_Login.Amil_UserLogin("Admin");
 	Reporter.log("Login with Admin Username & password - Successful");
 }
   

@@ -24,6 +24,7 @@ public class Shipper_CRM3BasContUpdate extends BaseClass{
 		super(driver);
 	}
 
+@SuppressWarnings("unused")
 @Test	
 public static void CRM_Shipper(String sTestCaseName) throws Exception {
 

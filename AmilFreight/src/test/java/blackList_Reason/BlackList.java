@@ -19,7 +19,7 @@ public class BlackList extends BaseClass
 		}
 
 	@Test
-	public static void BlackList_Arul(String sTestCaseName) throws InterruptedException {
+	public static void BlackList_Arul(String sTestCaseName) throws Exception {
 
 		
 		Thread.sleep(9000);

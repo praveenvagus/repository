@@ -160,7 +160,7 @@ public class BookCarrierPage extends BaseClass {
 				Thread.sleep(15000); 
 				
 				Set<String> all = driver.getWindowHandles();
-				//System.out.println("all Tabs--"+all);
+				System.out.println("all Tabs--"+all);
 				    
 				for(String winHandle : driver.getWindowHandles())
 				{

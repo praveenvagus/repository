@@ -26,6 +26,7 @@ public class Shipment_LB extends BaseClass {
 		super(driver);
 		}
 
+	@SuppressWarnings("unused")
 	@Test
 	public static void PostLoad_ShipmentGUID(String sTestCaseName) throws Exception
 	{

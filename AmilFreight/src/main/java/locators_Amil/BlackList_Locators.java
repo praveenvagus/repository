@@ -13,7 +13,7 @@ public class BlackList_Locators extends BaseClass
 		}
 	private static WebElement element = null;
 
-	public static WebElement Search_carrierName()
+	public static WebElement Search_carrierName() throws Exception
 	{
 			try
         { 
@@ -26,7 +26,7 @@ public class BlackList_Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Click_Search()
+	public static WebElement Click_Search() throws Exception
 	{
 			try
         { 
@@ -39,7 +39,7 @@ public class BlackList_Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Click_BlackList()
+	public static WebElement Click_BlackList() throws Exception
 	{
 			try
         { 
@@ -52,7 +52,7 @@ public class BlackList_Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Black_List_reason()
+	public static WebElement Black_List_reason() throws Exception
 	{
 			try
         { 
@@ -65,7 +65,7 @@ public class BlackList_Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Comments()
+	public static WebElement Comments() throws Exception
 	{
 			try
         { 
@@ -78,7 +78,7 @@ public class BlackList_Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement movetoBlacklist()
+	public static WebElement movetoBlacklist() throws Exception
 	{
 			try
         { 
@@ -91,7 +91,7 @@ public class BlackList_Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement CRM_filter()
+	public static WebElement CRM_filter() throws Exception
 	{
 			try
         { 
@@ -104,7 +104,7 @@ public class BlackList_Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement CRM_Search_CompanyNAme()
+	public static WebElement CRM_Search_CompanyNAme() throws Exception
 	{
 			try
         { 
@@ -117,7 +117,7 @@ public class BlackList_Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement CRM_Click_Filter()
+	public static WebElement CRM_Click_Filter() throws Exception
 	{
 			try
         { 
@@ -130,7 +130,7 @@ public class BlackList_Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement CRM_move_Tab()
+	public static WebElement CRM_move_Tab() throws Exception
 	{
 			try
         { 
@@ -143,7 +143,7 @@ public class BlackList_Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement profile()
+	public static WebElement profile() throws Exception
 	{
 			try
         { 

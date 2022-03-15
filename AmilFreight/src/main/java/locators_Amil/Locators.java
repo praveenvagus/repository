@@ -13,7 +13,7 @@ public class Locators extends BaseClass
 		}
 	private static WebElement element = null;
 
-	public static WebElement Click_PostLoad()
+	public static WebElement Click_PostLoad() throws Exception
 	{
 			try
         { 
@@ -26,7 +26,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement LoadRef_ID()
+	public static WebElement LoadRef_ID() throws Exception
 	{
 			try
         { 
@@ -39,7 +39,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Rate()
+	public static WebElement Rate() throws Exception
 	{
 			try
         { 
@@ -52,7 +52,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Trailer_Type()
+	public static WebElement Trailer_Type() throws Exception
 	{
 			try
         { 
@@ -65,7 +65,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Hazardous()
+	public static WebElement Hazardous() throws Exception
 	{
 			try
         { 
@@ -78,7 +78,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Special_Instructions()
+	public static WebElement Special_Instructions() throws Exception
 	{
 			try
         { 
@@ -91,7 +91,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement PickUp_Location()
+	public static WebElement PickUp_Location() throws Exception
 	{
 			try
         { 
@@ -104,7 +104,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement PickUp_Date()
+	public static WebElement PickUp_Date() throws Exception
 	{
 			try
         { 
@@ -117,7 +117,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement PickUp_PackageType()
+	public static WebElement PickUp_PackageType() throws Exception
 	{
 			try
         { 
@@ -130,7 +130,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement PickUp_NoofPackage()
+	public static WebElement PickUp_NoofPackage() throws Exception
 	{
 			try
         { 
@@ -143,7 +143,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement PickUp_MaterialType()
+	public static WebElement PickUp_MaterialType() throws Exception
 	{
 			try
         { 
@@ -156,7 +156,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement PickUp_weight()
+	public static WebElement PickUp_weight() throws Exception
 	{
 			try
         { 
@@ -169,7 +169,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Delivery_Location()
+	public static WebElement Delivery_Location() throws Exception
 	{
 			try
         { 
@@ -182,7 +182,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Delivery_Date()
+	public static WebElement Delivery_Date() throws Exception
 	{
 			try
         { 
@@ -195,7 +195,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Delivery_PackageType()
+	public static WebElement Delivery_PackageType() throws Exception
 	{
 			try
         { 
@@ -208,7 +208,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Delivery_Noofpackage()
+	public static WebElement Delivery_Noofpackage() throws Exception
 	{
 			try
         { 
@@ -221,7 +221,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Delivery_Weight()
+	public static WebElement Delivery_Weight() throws Exception
 	{
 			try
         { 
@@ -234,7 +234,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Delivery_MaterialType()
+	public static WebElement Delivery_MaterialType() throws Exception
 	{
 			try
         { 
@@ -247,7 +247,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Save_ShipperPostLoad()
+	public static WebElement Save_ShipperPostLoad() throws Exception
 	{
 			try
         { 
@@ -260,7 +260,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Toggle_LogOut()
+	public static WebElement Toggle_LogOut() throws Exception
 	{
         try
         { 
@@ -273,7 +273,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement LogOut()
+	public static WebElement LogOut()  throws Exception
 	{
         try
         { 
@@ -286,7 +286,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Confirm_logout()
+	public static WebElement Confirm_logout()  throws Exception
 	{
         try
         { 
@@ -299,7 +299,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Login_user_Id()
+	public static WebElement Login_user_Id() throws Exception
 	{
         try
         { 
@@ -312,7 +312,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Login_Password()
+	public static WebElement Login_Password() throws Exception
 	{
         try
         { 
@@ -325,7 +325,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Login()
+	public static WebElement Login() throws Exception
 	{
         try
         { 
@@ -338,7 +338,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Search_ShipmentId()
+	public static WebElement Search_ShipmentId() throws Exception
 	{
 			try
         { 
@@ -351,7 +351,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Click_Search()
+	public static WebElement Click_Search() throws Exception
 	{
 			try
         { 
@@ -364,7 +364,7 @@ public class Locators extends BaseClass
         }
 		return element;
 	}
-	public static WebElement Click_Tab()
+	public static WebElement Click_Tab() throws Exception
 	{
 			try
         { 

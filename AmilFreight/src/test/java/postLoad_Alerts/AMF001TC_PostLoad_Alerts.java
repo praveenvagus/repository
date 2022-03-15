@@ -7,13 +7,13 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import common_Operations.AmilFreight_Loggedout;
 import common_Operations.AmilFreight_Login;
 import utility_Files.BaseClass;
 import utility_Files.Log;
 import utility_Files.Utils;
 
 
+@SuppressWarnings("deprecation")
 public class AMF001TC_PostLoad_Alerts
 {
 	public WebDriver driver;
@@ -24,7 +24,8 @@ public class AMF001TC_PostLoad_Alerts
     ExtentReports extent;
     ExtentTest test;
 	
-  @BeforeClass
+
+@BeforeClass
   public void Initializing_BrowserAmilFreight() throws Exception 
   {
 
@@ -42,7 +43,7 @@ public class AMF001TC_PostLoad_Alerts
   @Test(priority = 1)
   public void LoggedIn_AmilFreight() throws Exception {
 
-	  AmilFreight_Login.Amil_UserLogin();
+	  AmilFreight_Login.Amil_UserLogin("Admin");
 	  	
   }
   

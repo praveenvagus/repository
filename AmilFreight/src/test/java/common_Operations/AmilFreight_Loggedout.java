@@ -31,6 +31,7 @@ public class AmilFreight_Loggedout extends BaseClass {
 	ex.executeScript("arguments[0].click()",  Amil_Login_Page.LoggedOut_Confirm());
 	Reporter.log("Alert 6 - Loggedout with Amilfreight Success");
 	//driver.close();
+	Thread.sleep(3000);
 	
 }
 	
